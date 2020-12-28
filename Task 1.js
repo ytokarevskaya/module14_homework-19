@@ -23,7 +23,7 @@ const exampleXml = `
 
 
 const xmlDocument = parser.parseFromString(exampleXml, "text/xml");
-const men = xmlDocument.querySelectorAll("man");
+const men = xmlDocument.querySelectorAll("student"); 
 let list = [];
 men.forEach((man) => {
     let firstName = man.querySelector("name").querySelector("first")
@@ -43,3 +43,5 @@ men.forEach((man) => {
 });
 const decision = { list };
 console.log("result :", decision);
+
+// В консоль выводится объект с пустым массивом из-за того, что в querySelectorAll используется неправильный селектор. Исправила в коде

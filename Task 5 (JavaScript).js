@@ -55,6 +55,10 @@ window.onload = function () {
 
   });
 
-  const dataJSON = JSON.parse(localStorage.getItem('myImages'));
-  displayResult(dataJSON);
+  const lsData = localStorage.getItem('myImages');
+  if (lsData) {
+    displayResult(JSON.parse(lsData));
+  }
+
+  // Часть со считыванием из localStorage сделана неправильно. Функция displayResult должна вызываться только в случае, если в localStorage есть данные с ключом myImages. Если открыть страницу в первый раз с пустым localStorage, код выдает ошибку. 
 };

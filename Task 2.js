@@ -17,11 +17,12 @@ const exampleJson = `
 
 const getData = JSON.parse(exampleJson);
 
+// const result = {
+//   name: man.name,
+//   age: man.age,
+//   prof: man.prof,
+// };
 
-const result = {
-  name: man.name,
-  age: man.age,
-  prof: man.prof,
-};
+console.log('result', getData);
 
-console.log('result', result);
+// Код выполняется с ошибкой из-за того, что переменная man, которую вы используете в коде, нигде не определена. Для верного решения достаточно было бы вывести в консоль getData, потому что JSON.parse создает из JSON-строки валидный JS-объект с такой же структурой, как в JSON
